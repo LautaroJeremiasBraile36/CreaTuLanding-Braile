@@ -1,0 +1,36 @@
+.navbar {
+  margin: 0;
+  box-sizing: border-box;
+  background-color: rgb(15, 182, 15);
+  height: 20vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 15px;
+}
+.logo {
+  color: aliceblue;
+}
+.logo:hover {
+  color: rgb(76, 0, 255);
+}
+
+.navlinks {
+  font-size: 1.2rem;
+  font-weight: 400;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  color: aliceblue;
+  gap: 40px;
+}
+
+.navlinks a {
+  list-style: none;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}

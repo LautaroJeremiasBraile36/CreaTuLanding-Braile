@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.containerNosotros {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.mainNosotros {
+  min-height: 100vh;
+  width: 100%;
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tituloNosotros {
+  font-size: 2rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.parrafoNosotros {
+  font-size: 1.3rem;
+  font-weight: 400;
+  text-align: justify;
+}
