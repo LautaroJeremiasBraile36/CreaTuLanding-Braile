@@ -1,0 +1,110 @@
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.titulo {
+  text-align: center;
+  margin-bottom: 32px;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.loading {
+  text-align: center;
+  font-size: 18px;
+  padding: 60px 0;
+}
+
+/* Botón volver */
+.backBtn {
+  margin-bottom: 30px;
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: black;
+  cursor: pointer;
+}
+
+/* Card principal */
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  background: #fff;
+  border-radius: 24px;
+  padding: 30px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+}
+
+/* Imagen */
+.imageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f9fafb;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.image {
+  max-width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+}
+
+/* Info */
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #111827;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #4b5563;
+  margin-bottom: 20px;
+}
+
+.price {
+  font-size: 26px;
+  font-weight: 900;
+  color: #111827;
+  margin-bottom: 25px;
+}
+
+/* Botón comprar */
+.buyBtn {
+  background: #111827;
+  color: white;
+  border: none;
+  padding: 14px 30px;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.buyBtn:hover {
+  background: #000;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .card {
+    grid-template-columns: 1fr;
+  }
+}

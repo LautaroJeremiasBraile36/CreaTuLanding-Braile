@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import styles from "../components/Css/ItemListContainer.module.css";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -9,18 +10,31 @@ const Products = () => {
       .then((data) => setProducts(data));
   }, []);
   return (
-    <>
-      <h1>Productos MotherFucker</h1>
-      <ul>
+    <div className={styles.container}>
+      <h2 className={styles.title}>Productos </h2>
+
+      <div className={styles.grid}>
         {products.map((prod) => (
-          <li key={prod.id}>
-            <Link to={`/products/${prod.id}`} className="navLink">
-              {prod.title}
-            </Link>
-          </li>
+          <Link
+            to={`/products/${prod.id}`}
+            key={prod.id}
+            className={styles.productCard}
+          >
+            <div className={styles.productImage}>
+              <img src={prod.image} alt={prod.title} />
+            </div>
+
+            <div className={styles.productInfo}>
+              <h3 className={styles.productTitle}>{prod.title}</h3>
+              <p className={styles.productDescription}>
+                {prod.description.slice(0, 80)}...
+              </p>
+              <span className={styles.productPrice}>${prod.price}</span>
+            </div>
+          </Link>
         ))}
-      </ul>
-    </>
+      </div>
+    </div>
   );
 };
 
