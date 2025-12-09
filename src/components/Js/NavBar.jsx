@@ -20,10 +20,6 @@ const NavBar = () => {
       <NavLink to={"/contact"} className={styles.navlinks}>
         Contact
       </NavLink>
-
-      {/*       <Logo />
-      <NavLinks />
-      <CartWidget /> */}
     </nav>
   );
 };
