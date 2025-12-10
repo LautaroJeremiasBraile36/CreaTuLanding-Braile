@@ -1,45 +1,10 @@
-import { useEffect, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
-import styles from "../components/Css/ProductDetail.module.css";
+import Item from "../components/Js/Item";
 
 const ProductsDetail = () => {
-  const { id } = useParams();
-  const navigate = useNavigate();
-  const [product, setProduct] = useState(null);
-
-  useEffect(() => {
-    fetch(`https://fakestoreapi.com/products/${id}`)
-      .then((response) => response.json())
-      .then((data) => setProduct(data));
-  }, [id]);
-
-  if (!product) return <p className={styles.loading}>Cargando...</p>;
-
   return (
-    <div className={styles.container}>
-      <button className={styles.backBtn} onClick={() => navigate(-1)}>
-        Volver / Back
-      </button>
-      <h2 className={styles.titulo}>Detalle del producto</h2>
-
-      <div className={styles.card}>
-        <div className={styles.imageContainer}>
-          <img
-            src={product.image}
-            alt={product.title}
-            className={styles.image}
-          />
-        </div>
-
-        <div className={styles.info}>
-          <h1 className={styles.title}>{product.title}</h1>
-          <p className={styles.description}>{product.description}</p>
-          <span className={styles.price}>${product.price}</span>
-
-          {/*   <button className={styles.buyBtn}>Agregar al carrito 🛒</button> */}
-        </div>
-      </div>
-    </div>
+    <>
+      <Item></Item>
+    </>
   );
 };
 
