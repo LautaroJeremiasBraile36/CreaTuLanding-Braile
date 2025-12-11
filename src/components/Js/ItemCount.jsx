@@ -17,6 +17,7 @@ function ItemCount({ Item }) {
   const handleAddToCart = () => {
     addToCart({ ...Item, count: counter });
   };
+
   return (
     <>
       <div>

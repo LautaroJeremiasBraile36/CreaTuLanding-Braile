@@ -1,5 +1,7 @@
-.Cart {
-  font-size: 1.2rem;
+.CartWidget {
+  background-color: transparent;
+  border: none;
+  font-size: 1rem;
   cursor: pointer;
   color: white;
 }

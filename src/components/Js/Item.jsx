@@ -3,7 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import styles from "../Css/Item.module.css";
 import ItemCount from "./ItemCount";
 
-function Item({ prod }) {
+function Item() {
   const { id } = useParams();
   const navigate = useNavigate();
   const [product, setProduct] = useState(null);
@@ -21,6 +21,7 @@ function Item({ prod }) {
       <button className={styles.backBtn} onClick={() => navigate(-1)}>
         Volver / Back
       </button>
+
       <h2 className={styles.titulo}>Detalle del producto</h2>
 
       <div className={styles.card}>
@@ -36,8 +37,8 @@ function Item({ prod }) {
           <h1 className={styles.title}>{product.title}</h1>
           <p className={styles.description}>{product.description}</p>
           <span className={styles.price}>${product.price}</span>
-          <ItemCount Item={prod}></ItemCount>
-          {/*   <button className={styles.buyBtn}>Agregar al carrito 🛒</button> */}
+
+          <ItemCount Item={product} />
         </div>
       </div>
     </div>

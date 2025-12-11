@@ -1,7 +1,10 @@
+import CartContainer from "../components/Js/CartContainer";
+
 const Cart = () => {
   return (
     <>
-      <h1>Carrito </h1>
+      <CartContainer />
+      <></>
     </>
   );
 };

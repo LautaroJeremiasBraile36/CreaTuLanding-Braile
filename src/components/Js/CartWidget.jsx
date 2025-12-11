@@ -1,14 +1,17 @@
 import styles from "../Css/CartWidget.module.css";
 import { useContext } from "react";
 import CartContext from "../../context/CartContext";
+import { useNavigate } from "react-router-dom";
 
 const CartWidget = () => {
   const { getTotalProd } = useContext(CartContext);
   const total = getTotalProd();
+  const navigate = useNavigate();
+
   return (
-    <div className={styles.Cart}>
+    <button className={styles.CartWidget} onClick={() => navigate("/cart")}>
       🛒 <span>{total}</span>
-    </div>
+    </button>
   );
 };
 
