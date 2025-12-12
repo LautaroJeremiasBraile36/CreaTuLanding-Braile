@@ -1,6 +1,7 @@
 /* Context */
 import GetDocsDBContext from "./GetDocsDBContext";
 /* Hooks */
+
 import { useState, useEffect } from "react";
 /* DataBase */
 import { getFirestore, getDocs, collection } from "firebase/firestore";
@@ -19,7 +20,11 @@ function GetDocsDBProvider({ children }) {
         setLoading(true);
         setError(null);
         const querySnap = await getDocs(productsRef);
-        const products = querySnap.docs.map((doc) => doc.data());
+        const products = querySnap.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+
         setProducts(products);
       } catch (error) {
         setError(error);
